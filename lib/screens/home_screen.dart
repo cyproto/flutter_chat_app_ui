@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(left: 40, top: 70),
+                padding: EdgeInsets.only(left: 30, top: 70),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -30,23 +30,109 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width - 40,
-                      height: 70,
+                      height: 75,
                       child: ListView.builder(
                         itemBuilder: (context, index) {
-                          if (index < HomeScreenModel.statusImages.length) {
+                          if (index == 0) {
                             return Container(
-                              margin: EdgeInsets.symmetric(horizontal: 3),
+                              decoration: BoxDecoration(
+                                color: Colors.teal[300],
+                                shape: BoxShape.circle,
+                              ),
+                              padding: EdgeInsets.all(
+                                5,
+                              ),
+                              margin: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 4),
+                              child: IconButton(
+                                icon: Icon(
+                                  Icons.search,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            );
+                          }
+
+                          if (index < HomeScreenModel.statusImages.length + 1) {
+                            return Container(
+                              margin: EdgeInsets.symmetric(
+                                  horizontal: 5, vertical: 4),
                               child: CircleAvatar(
                                 radius: 35,
                                 backgroundImage: NetworkImage(
-                                    HomeScreenModel.statusImages[index]),
+                                    HomeScreenModel.statusImages[index - 1]),
                                 backgroundColor: Colors.transparent,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                      blurRadius: 3,
+                                      color: Colors.black,
+                                      spreadRadius: 1)
+                                ],
                               ),
                             );
                           }
                         },
                         scrollDirection: Axis.horizontal,
                       ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        FlatButton(
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsetsDirectional.only(end: 8),
+                                height: 2,
+                                width: 2,
+                                decoration: BoxDecoration(
+                                  color: Colors.amber[200],
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                              Text(
+                                'Messages',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: Text(
+                            'Calls',
+                            style: TextStyle(color: Colors.white38),
+                          ),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: Text(
+                            'Groups',
+                            style: TextStyle(color: Colors.white38),
+                          ),
+                          onPressed: () {},
+                        ),
+                        RaisedButton(
+                          child: Text(
+                            'CREATE',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          onPressed: () {},
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          color: Colors.teal[300],
+                        ),
+                      ],
                     )
                   ],
                 ),
