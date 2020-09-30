@@ -41,7 +41,7 @@ List<HomeScreenChatModel> homeScreenChats = [
     name: 'Maria Bail',
     message: 'Can\'t talk now.',
     profileImageUrl:
-        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043272-avatar-lazybones-sloth-sluggard_113274.png',
+        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043250-avatar-child-girl-kid_113270.png',
     chatTime: '10:32 pm',
     unreadMessageCount: 1,
   ),
@@ -57,7 +57,7 @@ List<HomeScreenChatModel> homeScreenChats = [
     name: 'Maria Zarco',
     message: 'Is this my expresso machine?',
     profileImageUrl:
-        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043252-child-girl-kid-person_113255.png',
+        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043270-avatar-joker-squad-suicide-woman_113256.png',
     chatTime: '09:38 pm',
     unreadMessageCount: 0,
   ),
@@ -65,7 +65,31 @@ List<HomeScreenChatModel> homeScreenChats = [
     name: 'Rosita Marcos',
     message: 'I gave it a cold?',
     profileImageUrl:
-        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043240-avatar-bad-breaking-chemisrty-heisenberg_113279.png',
+        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043251-avatar-female-girl-woman_113291.png',
+    chatTime: '09:05 pm',
+    unreadMessageCount: 9,
+  ),
+  HomeScreenChatModel(
+    name: 'Gualtiero Zarco',
+    message: 'Hey! What\'s up?',
+    profileImageUrl:
+        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043255-beard-hipster-male-man_113243.png',
+    chatTime: '09:56 pm',
+    unreadMessageCount: 4,
+  ),
+  HomeScreenChatModel(
+    name: 'Maria Cea',
+    message: 'Is this my expresso machine?',
+    profileImageUrl:
+        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043252-child-girl-kid-person_113255.png',
+    chatTime: '09:38 pm',
+    unreadMessageCount: 0,
+  ),
+  HomeScreenChatModel(
+    name: 'Maria Marcos',
+    message: 'I gave it a cold?',
+    profileImageUrl:
+        'https://cdn.icon-icons.com/icons2/1736/PNG/128/4043248-avatar-female-portrait-woman_113285.png',
     chatTime: '09:05 pm',
     unreadMessageCount: 9,
   ),
@@ -76,5 +100,5 @@ List<HomeScreenChatModel> homeScreenChats = [
 // <img src=""/>
 // <img src=""/>
 // <img src="https://cdn.icon-icons.com/icons2/1736/PNG/128/4043239-baby-child-kid-toddler_113286.png"/>
-// <img src="https://cdn.icon-icons.com/icons2/1736/PNG/128/4043248-avatar-female-portrait-woman_113285.png"/>
+// <img src=""/>
 // <img src="https://cdn.icon-icons.com/icons2/1736/PNG/128/4043270-avatar-joker-squad-suicide-woman_113256.png"/>
