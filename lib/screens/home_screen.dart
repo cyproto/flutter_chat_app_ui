@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/home_screen_model.dart';
+import '../widgets/single_chat_tile_home_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -157,10 +158,23 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             padding: EdgeInsets.only(
-              top: 30,
+              top: 10,
             ),
             child: SingleChildScrollView(
-              child: Text('abc'),
+              child: Container(
+                height: MediaQuery.of(context).size.height - 350,
+                child: ListView.builder(
+                    itemCount: homeScreenChats.length,
+                    itemBuilder: (context, index) {
+                      return SingleChatTileHomeScreen(
+                        homeScreenChats[index].name,
+                        homeScreenChats[index].message,
+                        homeScreenChats[index].profileImageUrl,
+                        homeScreenChats[index].chatTime,
+                        homeScreenChats[index].unreadMessageCount,
+                      );
+                    }),
+              ),
             ),
           ),
         ],
