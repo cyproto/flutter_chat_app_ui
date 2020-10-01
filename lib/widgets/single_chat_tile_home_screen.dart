@@ -7,6 +7,7 @@ class SingleChatTileHomeScreen extends StatelessWidget {
   final String profileImageUrl;
   final String chatTime;
   final int unreadMessageCount;
+  final Function openChatScreen;
 
   SingleChatTileHomeScreen(
     this.name,
@@ -14,6 +15,7 @@ class SingleChatTileHomeScreen extends StatelessWidget {
     this.profileImageUrl,
     this.chatTime,
     this.unreadMessageCount,
+    this.openChatScreen,
   );
 
   @override
@@ -38,7 +40,9 @@ class SingleChatTileHomeScreen extends StatelessWidget {
         elevation: 0,
         color: Colors.transparent,
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            openChatScreen(context, name);
+          },
           child: Container(
             height: 100,
             padding: EdgeInsets.symmetric(horizontal: 30),

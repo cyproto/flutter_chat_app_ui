@@ -4,6 +4,26 @@ import '../models/home_screen_model.dart';
 import '../widgets/single_chat_tile_home_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  void openChatScreen(BuildContext context, String name) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      isDismissible: false,
+      builder: (context) {
+        return Container(
+          height: MediaQuery.of(context).size.height - 100,
+          child: Text(name),
+        );
+      },
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -172,6 +192,7 @@ class HomeScreen extends StatelessWidget {
                         homeScreenChats[index].profileImageUrl,
                         homeScreenChats[index].chatTime,
                         homeScreenChats[index].unreadMessageCount,
+                        openChatScreen,
                       );
                     }),
               ),
