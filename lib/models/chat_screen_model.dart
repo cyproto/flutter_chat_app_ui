@@ -24,7 +24,7 @@ List<ChatScreenModel> messages = [
     messageTime: '6:55 am',
     isSentMessage: true,
     isDelivered: true,
-    isRead: true,
+    isRead: false,
   ),
   ChatScreenModel(
     messageId: '2',
@@ -55,18 +55,18 @@ List<ChatScreenModel> messages = [
   ),
   ChatScreenModel(
     messageId: '5',
-    message:
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+    message: 'There are many variations of passages of Lorem Ipsum available',
     messageTime: '6:55 am',
-    isSentMessage: true,
+    isSentMessage: false,
     isDelivered: true,
     isRead: true,
   ),
   ChatScreenModel(
     messageId: '6',
-    message: 'There are many variations of passages of Lorem Ipsum available',
+    message:
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     messageTime: '6:55 am',
-    isSentMessage: false,
+    isSentMessage: true,
     isDelivered: true,
     isRead: true,
   ),

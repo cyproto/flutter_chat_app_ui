@@ -41,7 +41,7 @@ class SingleChatTileHomeScreen extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: () {
-            openChatScreen(context, name);
+            openChatScreen(context, name, profileImageUrl);
           },
           child: Container(
             height: 100,
